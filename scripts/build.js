@@ -1,6 +1,7 @@
 import { readFile, writeFile, mkdir, readdir, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 import { build } from 'esbuild';
 import { minify } from 'html-minifier-terser';
 import sharp from 'sharp';
@@ -52,9 +53,14 @@ await build({
     plugins: [fontesLocais]
 });
 
+async function versao(arquivo) {
+    return createHash('sha256').update(await readFile(path.join(destino, arquivo)))
+        .digest('hex').slice(0, 12);
+}
+
 const entrada = (await readFile(path.join(raiz, 'html/index.html'), 'utf8'))
-    .replace('../css/estilos.css', 'css/estilos.min.css')
-    .replace('../js/main.js', 'js/main.min.js');
+    .replace('../css/estilos.css', `css/estilos.min.css?v=${await versao('css/estilos.min.css')}`)
+    .replace('../js/main.js', `js/main.min.js?v=${await versao('js/main.min.js')}`);
 await writeFile(path.join(destino, 'index.html'), await minify(entrada, opcoesHTML));
 
 const imagens = [];
