@@ -64,6 +64,7 @@ function criarCartao(projeto) {
         link.remove();
     } else {
         botao.textContent = 'Ver atividade';
+        botao.setAttribute('aria-label', `Ver atividade: ${projeto.titulo}`);
         botao.dataset.modal = projeto.modal;
         link.href = projeto.destino;
         link.textContent = projeto.acao;
