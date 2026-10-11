@@ -11,6 +11,7 @@ cadastro de interesse em voluntariado. Os dados e as atividades são ilustrativo
 - Formulário com validação, mensagens de erro, máscara de telefone e foco no primeiro erro.
 - Recuperação do último cadastro válido no localStorage; a senha não é armazenada.
 - Atalho para o conteúdo, HTML semântico, labels e estados de acessibilidade.
+- Botão de alto contraste com aria-pressed; mantém o modo durante a navegação.
 
 Não há back-end, autenticação ou pagamentos. Use dados fictícios no formulário.
 Limpar campos reinicia a edição; Excluir cadastro salvo remove o registro local.
@@ -72,6 +73,18 @@ projeto e dispensam configuração de redirecionamento de um servidor.
   após recarregar, com senha vazia. Exclusão e limpeza também foram conferidas.
 - Leiaute sem rolagem horizontal em 360, 768 e 1440 pixels.
 - Fotos de produção: 57.004 bytes no total, contra 119.527 bytes dos originais.
+- Alto contraste: Enter ativa, Espaço desativa e o estado permanece nas rotas.
+- Contraste calculado pela fórmula de luminância WCAG em Python:
+  texto padrão 14,68:1; texto secundário 7,56:1; links 8,72:1;
+  botão 7,13:1; erro 6,47:1. No alto contraste: texto 21:1,
+  link 16,75:1, botão 19,56:1 e erro 8,65:1.
+
+Para repetir a conferência manual, execute a versão de produção, use Tab e
+Shift+Tab, ative o atalho para main com Enter e abra os diálogos por teclado.
+Feche com Escape e confira o retorno de foco. Envie o cadastro vazio,
+preencha com dados fictícios, salve, recarregue e exclua o registro local.
+Teste o botão de alto contraste nas três rotas e reduza a janela até 360 px.
+Envie o HTML de entrada ao [validador W3C](https://validator.w3.org/nu/).
 
 Os testes de teclado e semântica ajudam a verificar acessibilidade, mas não
 substituem testes com pessoas usuárias de leitores de tela. Não foi realizado
