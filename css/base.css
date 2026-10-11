@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--cor-texto);
+    background: var(--cor-fundo);
+    font-family: var(--fonte-familia);
+    font-size: var(--texto-base);
+    line-height: 1.6;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: var(--texto-titulo);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: var(--texto-grande);
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: var(--texto-medio);
+    line-height: 1.4;
+}
+
+a {
+    color: var(--cor-secundaria);
+    text-underline-offset: 0.2em;
+}
+
+button, input, select {
+    font: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+:focus-visible {
+    outline: 0.2rem solid var(--cor-secundaria);
+    outline-offset: 0.2rem;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+main[id], section[id], h1[id] {
+    scroll-margin-top: 6rem;
+}
+
+.pular-conteudo {
+    position: absolute;
+    top: -10rem;
+    left: var(--espaco-2);
+    z-index: 20;
+    padding: var(--espaco-2);
+    background: var(--cor-superficie);
+}
+
+.pular-conteudo:focus {
+    top: var(--espaco-2);
+}

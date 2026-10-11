@@ -1,0 +1,94 @@
+/* Mobile first: a malha mantém 12 colunas em todas as resoluções. */
+.container {
+    width: calc(100% - var(--espaco-4));
+    max-width: var(--largura-maxima);
+    margin-inline: auto;
+}
+
+.pagina {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: var(--espaco-2);
+}
+
+.grid > * {
+    min-width: 0;
+}
+
+.col-12, .col-8, .col-6, .col-4 {
+    grid-column: span 12;
+}
+
+.secao {
+    padding-block: var(--espaco-4);
+}
+
+/* Cinco pontos de quebra, cada um com um ajuste concreto. */
+@media (min-width: 480px) {
+    .container {
+        width: calc(100% - var(--espaco-5));
+    }
+    .acoes {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-6, .col-4 {
+        grid-column: span 6;
+    }
+    .formulario__campos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .campo--largo {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .col-8 {
+        grid-column: span 8;
+    }
+    .col-4 {
+        grid-column: span 4;
+    }
+    .menu-botao {
+        display: none;
+    }
+    .menu {
+        display: flex;
+        width: auto;
+    }
+    .menu__lista {
+        flex-direction: row;
+    }
+    .hero__titulo {
+        font-size: var(--texto-destaque);
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid {
+        gap: var(--espaco-4);
+    }
+    .secao {
+        padding-block: var(--espaco-5);
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 82rem;
+    }
+    .hero {
+        padding-block: var(--espaco-6);
+    }
+}

@@ -1,0 +1,5 @@
+/* Ordem: tokens, regras globais, componentes e ajustes responsivos. */
+@import url("tokens.css");
+@import url("base.css");
+@import url("componentes.css");
+@import url("layout.css");

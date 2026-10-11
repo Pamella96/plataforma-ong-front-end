@@ -1,0 +1,34 @@
+/* Design system: cores, tipografia e espaçamento compartilhados pelas páginas. */
+:root {
+    --cor-primaria: #166534;
+    --cor-primaria-escura: #14532d;
+    --cor-secundaria: #1e40af;
+    --cor-destaque: #facc15;
+    --cor-sucesso: #15803d;
+    --cor-erro: #b91c1c;
+    --cor-aviso: #92400e;
+    --cor-texto: #1f2937;
+    --cor-texto-suave: #4b5563;
+    --cor-borda: #6b7280;
+    --cor-fundo: #f3f4f6;
+    --cor-superficie: #ffffff;
+
+    --fonte-familia: Arial, Helvetica, sans-serif;
+    --texto-pequeno: 0.875rem;
+    --texto-base: 1rem;
+    --texto-medio: 1.25rem;
+    --texto-grande: 1.5rem;
+    --texto-titulo: 2rem;
+    --texto-destaque: 2.5rem;
+
+    --espaco-1: 0.5rem;
+    --espaco-2: 1rem;
+    --espaco-3: 1.5rem;
+    --espaco-4: 2rem;
+    --espaco-5: 3rem;
+    --espaco-6: 4rem;
+
+    --raio: 0.5rem;
+    --sombra: 0 0.25rem 1rem rgb(31 41 55 / 12%);
+    --largura-maxima: 75rem;
+}

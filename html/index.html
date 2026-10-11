@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Plataforma acadêmica de uma ONG: projetos sociais, doações e voluntariado.">
+    <title>Início | ONG Comunidade</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script type="module" src="../js/main.js"></script>
+</head>
+<body class="pagina">
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <header class="cabecalho">
+        <div class="container cabecalho__interno">
+            <a class="marca" href="#/inicio">ONG Comunidade</a>
+            <button class="botao botao--secundario menu-botao" type="button"
+                    aria-controls="menu-principal" aria-expanded="false">
+                <span aria-hidden="true">☰</span> Menu
+            </button>
+            <nav class="menu" id="menu-principal" aria-label="Navegação principal">
+                <ul class="menu__lista">
+                    <li><a class="menu__link" href="#/inicio">Início</a></li>
+                    <li><a class="menu__link" href="#/projetos">Projetos sociais</a></li>
+                    <li><a class="menu__link" href="#/cadastro">Cadastro</a></li>
+                    <li class="submenu">
+                        <button class="menu__link submenu__botao" type="button"
+                                aria-controls="submenu-participar" aria-expanded="false">
+                            Participar <span aria-hidden="true">▾</span>
+                        </button>
+                        <ul class="submenu__lista" id="submenu-participar" hidden>
+                            <li><a class="submenu__link" href="#/voluntariado">Voluntariado</a></li>
+                            <li><a class="submenu__link" href="#/doacoes">Doações</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="conteudo" tabindex="-1">
+        <h1>ONG Comunidade</h1>
+        <noscript>Ative o JavaScript para navegar nesta aplicação.</noscript>
+    </main>
+    <footer class="rodape">
+        <div class="container rodape__interno">
+            <div>
+                <h2>Contato</h2>
+                <address>
+                    <p>E-mail: contato@ong.org</p>
+                    <p>Telefone: (21) 99999-9999</p>
+                    <p>Rio de Janeiro — RJ</p>
+                </address>
+            </div>
+            <div>
+                <p><a href="#/projetos">Conheça os projetos sociais</a></p>
+                <p><a href="#/cadastro">Participe como voluntário</a></p>
+                <p>Projeto acadêmico — dados ilustrativos.</p>
+                <p>Fotos ilustrativas: Julia M Cameron, Pexels.</p>
+            </div>
+        </div>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
